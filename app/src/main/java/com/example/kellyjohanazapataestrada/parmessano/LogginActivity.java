@@ -113,9 +113,9 @@ public class LogginActivity extends AppCompatActivity implements View.OnClickLis
             repass = data.getExtras().getString("RePass");
             email = data.getExtras().getString("Email");
 
-            Toast toast1 =
+           /* Toast toast1 =
                     Toast.makeText(getApplicationContext(), "User" + user+"Pass" + pass + "Email" + email, Toast.LENGTH_SHORT);
-            toast1.show();
+            toast1.show();*/
         }
         super.onActivityResult(requestCode, resultCode, data);
     }

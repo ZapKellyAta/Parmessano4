@@ -60,9 +60,9 @@ public class MainActivity extends LogginActivity implements View.OnClickListener
             String repass2 = data.getExtras().getString("RePass2");
             String email2 = data.getExtras().getString("Email2");
 
-            Toast toast1 =
+           /* Toast toast1 =
                     Toast.makeText(getApplicationContext(), "User" + user2+"Pass" + pass2 + "Email" + email2, Toast.LENGTH_SHORT);
-            toast1.show();
+            toast1.show();*/
         }
         //super.onActivityResult(requestCode, resultCode, data);
     }
