@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class PerilActivity extends LogginActivity implements View.OnClickListener
+public class PerfilActivity extends LogginActivity implements View.OnClickListener
 {
 
     TextureView User, Email;
@@ -50,6 +50,17 @@ public class PerilActivity extends LogginActivity implements View.OnClickListene
             setResult(RESULT_OK,intent);
             finish();
         }
+        else if(id == R.id.menu2)
+        {
+            Intent intent = new Intent(this,MenuActivity.class);
+            intent.putExtra("User2",user);
+            intent.putExtra("Pass2",pass);
+            intent.putExtra("RePass2",repass);
+            intent.putExtra("Email2",email);
+            startActivityForResult(intent, 4567);
+            setResult(RESULT_OK,intent);
+            finish();
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -67,8 +78,7 @@ public class PerilActivity extends LogginActivity implements View.OnClickListene
 
            /* Toast toast1 =
                     Toast.makeText(getApplicationContext(), "User" + user2+"Pass" + pass2 + "Email" + email2, Toast.LENGTH_SHORT);
-            toast1.show();*/
-        }
+            toast1.show();*/        }
         //super.onActivityResult(requestCode, resultCode, data);
     }
 }

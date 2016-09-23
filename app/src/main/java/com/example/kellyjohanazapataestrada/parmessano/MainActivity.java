@@ -32,7 +32,18 @@ public class MainActivity extends LogginActivity implements View.OnClickListener
         if(id == R.id.menuover)
         {
             Toast.makeText(getApplicationContext(), "Bienvenido a su perfil", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(this,PerilActivity.class);
+            Intent intent = new Intent(this,PerfilActivity.class);
+            intent.putExtra("User2",user);
+            intent.putExtra("Pass2",pass);
+            intent.putExtra("RePass2",repass);
+            intent.putExtra("Email2",email);
+            startActivityForResult(intent, 4567);
+            setResult(RESULT_OK,intent);
+            finish();
+        }
+        else if(id == R.id.menu2)
+        {
+            Intent intent = new Intent(this,MenuActivity.class);
             intent.putExtra("User2",user);
             intent.putExtra("Pass2",pass);
             intent.putExtra("RePass2",repass);
